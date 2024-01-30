@@ -1,0 +1,85 @@
+body {
+    background-image: url(https://img.freepik.com/free-photo/doi-luang-chiang-dao-mountains-sunrise-chiang-mai-thailand_335224-1400.jpg?w=996&t=st=1706065113~exp=1706065713~hmac=0dc0cbb4f85121008c7f14e5a6cafeaca80c198a6d22a0b0494c309fe1c8b578);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+.attribute-container {
+    width: 600px;
+    padding: 20px;
+    border: 1px solid black;
+    & a {
+        color: darkblue;
+        display: block;
+        margin-top: 20px;
+    }
+
+    & a[href] {
+        color: red;
+    }
+    
+    & a[href ^= "https"] {
+        color: green;
+    }
+
+    & a[href ^= "http"]::after {
+        content: "(unsecure)";
+        color: green;
+    }
+}
+
+.text-container {
+    width: 600px;
+    background-color: #eee;
+    padding: 20px;
+    margin-top: 20px;
+    & h1 {
+        color: darkblue;
+        text-align: center;
+        text-decoration: underline;
+        text-transform: uppercase;
+        word-spacing: 10px;
+        letter-spacing: 8px;
+    }
+
+    &  p {
+        line-height: 28px;
+    }
+}
+
+.table-section {
+    margin-top: 20px;
+
+    & table {
+        /* border: 1px solid black; */
+        border-collapse: collapse;
+
+        & th {
+            background-color: green;
+            color: whitesmoke;
+        }
+
+        & tbody > tr:nth-child(even) {
+            background-color: aquamarine;
+        }
+
+        & tbody > tr:nth-child(odd) {
+            background-color: bisque;
+            /* color: whitesmoke; */
+        }
+
+        & tbody> tr:hover {
+            background-color: #eee;
+        }
+
+        & tbody> tr > td:hover {
+            background-color: paleturquoise;
+        }
+    }
+
+    & th, td {
+        /* border: 1px solid black; */
+        padding: 14px;
+    }
+}
